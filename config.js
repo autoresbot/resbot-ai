@@ -11,7 +11,7 @@ const config = {
     owner_name          : 'Autoresbot',
     owner_number        : '6285246154386',
     owner_website       : 'autoresbot.com',
-    version             : '1.0.2',
+    version             : '1.0.3',
     rate_limit          : 3000, // 3 detik
     total_limit         : 20, // limit perhari -  user biasa || kalo premium unlimited
     sticker_packname    : 'Autoresbot',

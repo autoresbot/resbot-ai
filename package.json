@@ -1,6 +1,6 @@
 {
   "name": "Resbot-Ai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A project for Resbot AI",
   "main": "index.js",
   "scripts": {
