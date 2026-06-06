@@ -5,7 +5,7 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 ╔══════════════════════════════════════════════╗
 ║                🛠️ INFORMASI SCRIPT           ║
 ╠══════════════════════════════════════════════╣
-║ 📦 Version   : 2.0.0
+║ 📦 Version   : 2.0.1
 ║ 👨‍💻 Developer  : Azhari Creative              ║
 ║ 🌐 Website    : https://autoresbot.com       ║
 ║ 💻 GitHub     : github.com/autoresbot/resbot-ai
@@ -18,20 +18,22 @@ Script **Autoresbot** resmi menjadi **Open Source** dan dapat digunakan secara g
 
 import moment from 'moment-timezone';
 
+const APIKEY_AUTORESBOT = ''; // APIKEY BELI AMBIL DI autoresbot.com
+
 const config = {
   AutoUpdate: 'off', // on atau off
-  API_KEY: '', // APIKEY BELI AMBIL DI autoresbot.com
-  phone_number_bot: '', // Nomor BOT CONTOH : 6285124002201
+  phone_number_bot: '628xxx', // Nomor BOT CONTOH : 6285124002201
   type_connection: 'pairing', // qr atau pairing
   bot_destination: 'both', // group , private, both
   name_bot: 'Resbot Ai',
   owner_name: 'Autoresbot',
-  owner_number: ['6282154365238@s.whatsapp.net'],
+  owner_number: [], // '6282154365238@s.whatsapp.net'
   owner_website: 'autoresbot.com',
   version: global.version,
   rate_limit: 3000, // 3 detik
   total_limit: 100, // limit perhari -  user biasa || kalo premium unlimited
   sticker_packname: 'Autoresbot',
+  API_KEY: APIKEY_AUTORESBOT,
   sticker_author: `Date: ${moment
     .tz('Asia/Jakarta')
     .format('DD/MM/YY')}\nYouTube: Azhari Creative\nBot: 0852-4615-4386`,
@@ -69,6 +71,10 @@ const config = {
       API_KEY: '', // apikey dari aistudio.google.com
       MODEL: 'gemini-2.5-flash',
       BASE_URL: 'https://generativelanguage.googleapis.com/v1/models',
+    },
+    AUTORESBOT: {
+      API_KEY: APIKEY_AUTORESBOT,
+      BASE_URL: 'https://api.autoresbot.com/api/ai',
     },
     HISTORY_LIMIT: 10, // CHAT HISTORY LIMIT YANG TERSIMPAN
   },

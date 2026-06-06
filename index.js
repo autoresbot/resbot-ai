@@ -5,7 +5,7 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 ╔══════════════════════════════════════════════╗
 ║                🛠️ INFORMASI SCRIPT           ║
 ╠══════════════════════════════════════════════╣
-║ 📦 Version   : 2.0.0
+║ 📦 Version   : 2.0.1
 ║ 👨‍💻 Developer  : Azhari Creative              ║
 ║ 🌐 Website    : https://autoresbot.com       ║
 ║ 💻 GitHub     : github.com/autoresbot/resbot-ai
@@ -15,7 +15,7 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 Script **Autoresbot** resmi menjadi **Open Source** dan dapat digunakan secara gratis:
 🔗 https://autoresbot.com
 */
-global.version = '2.0.0';
+global.version = '2.0.1';
 
 import config from './config.js';
 import { clearDirectory } from './lib/utils.js';

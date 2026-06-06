@@ -1,6 +1,6 @@
 {
   "name": "resbot-ai",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A project for Resbot AI",
   "main": "index.js",
   "type": "module",
@@ -14,7 +14,7 @@
     "@hapi/boom": "^10.0.1",
     "api-autoresbot": "^1.0.6",
     "axios": "^1.6.0",
-    "baileys": "^7.0.0-rc.9",
+    "baileys": "^7.0.0-rc13",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0",
     "ffmpeg": "^0.0.4",
