@@ -5,7 +5,6 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 ╔══════════════════════════════════════════════╗
 ║                🛠️ INFORMASI SCRIPT           ║
 ╠══════════════════════════════════════════════╣
-║ 📦 Version   : 2.0.1
 ║ 👨‍💻 Developer  : Azhari Creative              ║
 ║ 🌐 Website    : https://autoresbot.com       ║
 ║ 💻 GitHub     : github.com/autoresbot/resbot-ai
@@ -16,20 +15,24 @@ Script **Autoresbot** resmi menjadi **Open Source** dan dapat digunakan secara g
 🔗 https://autoresbot.com
 */
 
+import { createRequire } from 'module';
 import moment from 'moment-timezone';
+
+// Versi bot dibaca langsung dari package.json agar hanya ada satu sumber kebenaran.
+const { version } = createRequire(import.meta.url)('./package.json');
 
 const APIKEY_AUTORESBOT = ''; // APIKEY BELI AMBIL DI autoresbot.com
 
 const config = {
   AutoUpdate: 'off', // on atau off
-  phone_number_bot: '628xxx', // Nomor BOT CONTOH : 6285124002201
+  phone_number_bot: '628xxx', // WAJIB: nomor BOT lengkap, 10-15 digit angka saja. CONTOH : 6285124002201
   type_connection: 'pairing', // qr atau pairing
-  bot_destination: 'both', // group , private, both
+  bot_destination: 'group', // group , private, both
   name_bot: 'Resbot Ai',
   owner_name: 'Autoresbot',
   owner_number: [], // '6282154365238@s.whatsapp.net'
   owner_website: 'autoresbot.com',
-  version: global.version,
+  version,
   rate_limit: 3000, // 3 detik
   total_limit: 100, // limit perhari -  user biasa || kalo premium unlimited
   sticker_packname: 'Autoresbot',
@@ -59,17 +62,19 @@ const config = {
     HD_ERROR: 'Yahh Gagal, Mohon maaf kak, tidak bisa hd in gambar',
     IMAGE_ERROR: 'Yahh Gagal, Mohon maaf kak, tidak bisa carikan kamu gambar',
     qc: 'Yah gagal bikin qc nya kak',
+    brat: 'Yah gagal bikin brat nya kak',
+    bratvid: 'Yah gagal bikin brat video nya kak',
   },
   AI: {
     DEFAULT_PROVIDER: 'groq', // gemini | groq
     GROQ: {
       API_KEY: '', // Apikey dari groq.com
-      MODEL: 'llama-3.3-70b-versatile',
+      MODEL: 'openai/gpt-oss-20b',
       BASE_URL: 'https://api.groq.com/openai/v1/chat/completions',
     },
     GEMINI: {
       API_KEY: '', // apikey dari aistudio.google.com
-      MODEL: 'gemini-2.5-flash',
+      MODEL: 'gemini-3.6-flash',
       BASE_URL: 'https://generativelanguage.googleapis.com/v1/models',
     },
     AUTORESBOT: {

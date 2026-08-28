@@ -5,7 +5,6 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 ╔══════════════════════════════════════════════╗
 ║                🛠️ INFORMASI SCRIPT           ║
 ╠══════════════════════════════════════════════╣
-║ 📦 Version   : 2.0.1
 ║ 👨‍💻 Developer  : Azhari Creative              ║
 ║ 🌐 Website    : https://autoresbot.com       ║
 ║ 💻 GitHub     : github.com/autoresbot/resbot-ai
@@ -15,21 +14,14 @@ Script ini **TIDAK BOLEH DIPERJUALBELIKAN** dalam bentuk apa pun!
 Script **Autoresbot** resmi menjadi **Open Source** dan dapat digunakan secara gratis:
 🔗 https://autoresbot.com
 */
-global.version = '2.0.1';
+
+// Harus paling atas: memasang filter log sebelum modul lain menghasilkan output.
+import './src/utils/consoleFilter.js';
 
 import config from './config.js';
-import { clearDirectory } from './lib/utils.js';
-import { connectToWhatsApp } from './src/connection.js';
+import { start } from './src/app.js';
 
-// Bersihkan directory tmp saat start
-clearDirectory('./tmp');
+// Dipertahankan untuk kompatibilitas; sumber versi sebenarnya ada di package.json.
+global.version = config.version;
 
-async function checkAndUpdate() {
-  if (config.AutoUpdate == 'on') {
-    const { cloneOrUpdateRepo } = await import('./lib/cekUpdate.js');
-    await cloneOrUpdateRepo();
-  }
-  await connectToWhatsApp();
-}
-
-checkAndUpdate();
+start();
